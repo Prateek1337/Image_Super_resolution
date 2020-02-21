@@ -74,9 +74,10 @@ def prepare_crop_data(_path):
         # two resize operation to produce training data and labels
         lr_img = cv2.resize(hr_img, (int(shape[1] / scale), int(shape[0] / scale)))
         lr_img = cv2.resize(lr_img, (shape[1], shape[0]))
+        print(shape[0],shape[1])
 
-        width_num = int((shape[0] - BLOCK_STEP)/BLOCK_SIZE)
-        height_num = int((shape[1] - BLOCK_STEP)/BLOCK_SIZE)
+        width_num = int(((shape[0] - BLOCK_SIZE)/BLOCK_STEP))
+        height_num = int(((shape[1] - BLOCK_SIZE)/BLOCK_STEP))
         for k in range(width_num):
             for j in range(height_num):
                 x = k * BLOCK_STEP
@@ -142,9 +143,8 @@ def prepare_crop_data_rgb(_path):
         # two resize operation to produce training data and labels
         lr_img = cv2.resize(hr_img, (int(shape[1] / scale), int(shape[0] / scale)))
         lr_img = cv2.resize(lr_img, (shape[1], shape[0]))
-
-        width_num = int((shape[0] - BLOCK_STEP)/BLOCK_SIZE)
-        height_num = int((shape[1] - BLOCK_STEP)/BLOCK_SIZE)
+        width_num = int((shape[0] - BLOCK_SIZE)/BLOCK_STEP)
+        height_num = int((shape[1] - BLOCK_SIZE)/BLOCK_STEP)
         for k in range(width_num):
             for j in range(height_num):
                 x = k * BLOCK_STEP
@@ -208,10 +208,10 @@ def prepare_data_rgb(_path):
 
 
 if __name__ == "__main__":
-    # data, label = prepare_crop_data(DATA_PATH)
-    # write_hdf5(data, label, "crop_train.h5")
-    # data, label = prepare_data(TEST_PATH)
-    # write_hdf5(data, label, "test.h5")
+    data, label = prepare_crop_data(DATA_PATH)
+    write_hdf5(data, label, "crop_train.h5")
+    data, label = prepare_data(TEST_PATH)
+    write_hdf5(data, label, "test.h5")
     data, label=prepare_crop_data_rgb(DATA_PATH)
     write_hdf5(data,label,"train_rgb.h5")
     data, label=prepare_data_rgb(TEST_PATH)
