@@ -10,7 +10,12 @@ We conducted experiments from [this paper](https://arxiv.org/abs/1501.00092).
 
 We first tested different filters. We tried the following combinations:
 
-1.**915**
+A.  **915**
+
+Comparing PSNRs between Bicubic and our SRCNN for YCrCCb:
+
+
+
 
 
 
