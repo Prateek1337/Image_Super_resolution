@@ -10,13 +10,36 @@ We conducted experiments from [this paper](https://arxiv.org/abs/1501.00092).
 
 We first tested different filters. We tried the following combinations:
 
-A.  **915**
+A.  **915 :**
 
 Comparing PSNRs between Bicubic and our SRCNN for YCrCCb:
 
+Bicubic: 32.053059313091204
+
+SRCNN: 33.56075266205568 
+
+B.  **935 :**
+
+Comparing PSNRs between Bicubic and our SRCNN for YCrCCb:
+
+Bicubic: 32.053059313091204
+
+SRCNN: 33.68691645424939
+
+C.  **955 :**
+
+Comparing PSNRs between Bicubic and our SRCNN for YCrCCb:
+
+Bicubic: 32.053059313091204
+
+SRCNN: 33.616639192529114 
 
 
 
 
 
 
+
+
+
+ 
