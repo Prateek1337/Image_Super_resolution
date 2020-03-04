@@ -60,6 +60,9 @@ Output:
 
 ![Output of the955](https://user-images.githubusercontent.com/60055090/75880733-d6ee9080-5e43-11ea-95b7-e9f8c8a72974.png)
 
+**Comparing three of them :**
+
+![Screen Shot 2020-03-04 at 4 55 39 PM](https://user-images.githubusercontent.com/60055090/75876974-ae16cd00-5e3c-11ea-8a51-76629188d0aa.png)
 
 
 
